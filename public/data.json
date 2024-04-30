@@ -1,0 +1,164 @@
+[
+  {
+    "id": 1,
+    "estate_title": "Cozy Family Home",
+    "segment_name": "Single-family home",
+    "description": "A charming single-family home perfect for a small family.",
+    "price": "$350,000",
+    "status": "sale",
+    "area": "1,800 sq ft",
+    "location": "123 Main Street, Anytown",
+    "facilities": [
+      "Living room",
+      "Backyard garden",
+      "Garage"
+    ],
+    "image": "https://i.ibb.co/Xpvg4Bh/family-home-1.jpg",
+    "lat": 40.7128,
+    "lng": -74.006
+  },
+  {
+    "id": 2,
+    "estate_title": "Luxury Townhouse",
+    "segment_name": "Townhouse",
+    "description": "An elegant townhouse with modern amenities.",
+    "price": "$500,000",
+    "status": "sale",
+    "area": "2,500 sq ft",
+    "location": "456 Elm Street, Cityville",
+    "facilities": [
+      "Spacious kitchen",
+      "Community pool",
+      "Fitness center"
+    ],
+    "image": "https://i.ibb.co/Z18MC6X/townhouse-1.jpg",
+    "lat": 34.0522,
+    "lng": -118.2437
+  },
+  {
+    "id": 3,
+    "estate_title": "Downtown Apartment",
+    "segment_name": "Apartment",
+    "description": "A stylish apartment in the heart of the city.",
+    "price": "$2,000/month",
+    "status": "rent",
+    "area": "1,200 sq ft",
+    "location": "789 Oak Avenue, Metro City",
+    "facilities": [
+      "Balcony with city view",
+      "24/7 security",
+      "On-site laundry"
+    ],
+    "image": "https://i.ibb.co/zQgGfhX/3-1.jpg",
+    "lat": 34.0522,
+    "lng": -118.2437
+  },
+  {
+    "id": 4,
+    "estate_title": "Student Complex",
+    "segment_name": "Student housing",
+    "description": "A convenient and affordable option for college students.",
+    "price": "$800/month",
+    "status": "rent",
+    "area": "Shared accommodation",
+    "location": "10 University Drive, Campus Town",
+    "facilities": [
+      "Furnished bedrooms",
+      "Study lounge",
+      "Fitness center"
+    ],
+    "image": "https://i.ibb.co/Mnb2sBC/student-housing-1.jpg",
+    "lat": 40.4432,
+    "lng": -79.9445
+  },
+  {
+    "id": 5,
+    "estate_title": "Family Retreat Villa",
+    "segment_name": "Vacation rental",
+    "description": "A spacious villa perfect for family getaways.",
+    "price": "$300/night",
+    "status": "sale",
+    "area": "3,000 sq ft",
+    "location": "789 Lakeview Drive, Lakeside Resort",
+    "facilities": [
+      "Private pool",
+      "Game room",
+      "Outdoor barbecue area"
+    ],
+    "image": "https://i.ibb.co/DQ6M3jQ/family-villa-1.jpg",
+    "lat": 37.7749,
+    "lng": -122.4194
+  },
+  {
+    "id": 6,
+    "estate_title": "Senior Community",
+    "segment_name": "Senior living",
+    "description": "A peaceful community for retirees seeking comfort and convenience.",
+    "price": "$3,500/month",
+    "status": "rent",
+    "area": "Assisted living apartments",
+    "location": "55 Sunset Boulevard, Serenity Gardens",
+    "facilities": [
+      "Wellness center",
+      "Restaurant-style dining",
+      "Scheduled transportation"
+    ],
+    "image": "https://i.ibb.co/VJbYN9g/senior-1.jpg",
+    "lat": 42.3601,
+    "lng": -71.0589
+  },
+  {
+    "id": 7,
+    "estate_title": "Lakefront Cottage",
+    "segment_name": "Vacation rental",
+    "description": "A cozy cottage nestled by the lake, perfect for a romantic getaway.",
+    "price": "$200/night",
+    "status": "rent",
+    "area": "800 sq ft",
+    "location": "456 Lakeside Avenue, Tranquil Haven",
+    "facilities": [
+      "Fireplace",
+      "Private dock",
+      "Outdoor seating area"
+    ],
+    "image": "https://i.ibb.co/BfS4pf0/lake-cottage-1.jpg",
+    "lat": 43.0389,
+    "lng": -87.9065
+  },
+  {
+    "id": 8,
+    "estate_title": "Modern Loft Apartment",
+    "segment_name": "Apartment",
+    "description": "A sleek and stylish loft apartment in a trendy urban neighborhood.",
+    "price": "$2,500/month",
+    "status": "rent",
+    "area": "1,500 sq ft",
+    "location": "123 Loft Avenue, Arts District",
+    "facilities": [
+      "Open-concept layout",
+      "High ceilings",
+      "Rooftop terrace"
+    ],
+    "image": "https://i.ibb.co/hH1zd57/2-1.jpg",
+    "lat": 33.749,
+    "lng": -84.388
+  },
+  {
+    "id": 9,
+    "estate_title": "Family Townhome",
+    "segment_name": "Townhouse",
+    "description": "A spacious townhome with plenty of room for the whole family.",
+    "price": "$450,000",
+    "status": "sale",
+    "area": "2,200 sq ft",
+    "location": "789 Maple Street, Suburbia",
+    "facilities": [
+      "Playground",
+      "Community clubhouse",
+      "Private patio"
+    ],
+    "image": "https://i.ibb.co/Fm1sLQF/townhome-1.jpg",
+    "lat": 41.8781,
+    "lng": -87.6298
+  }
+]

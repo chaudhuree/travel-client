@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+ul li a.active {
+  background-color: #2b3440;
+  color: #f9fafb;
+}
+input::placeholder {
+  color: #6D6523; 
+  font-weight: 400;
+}
+input:focus{
+  border-color: #6D6523 !important;
+}
+.estatedata .swiper-button-next:after,
+.estatedata .swiper-button-prev:after {
+  color: white;
+  background-color: #4f1410b6;
+  font-size: 15px;
+  padding: 15px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  border: 1px solid #6c6312;
+}
+
+
+.estatedata .swiper-initialized {
+  z-index: 0;
+  overflow: visible;
+}
+
+.estatedata .swiper-button-prev {
+  position: absolute;
+  top: -20px;
+  left: 80%;
+  z-index: 999;
+}
+.estatedata .swiper-button-next {
+  position: absolute;
+  top: -20px;
+  left: 85%;
+  z-index: 999;
+  margin-left: 20px !important;
+}
+.custom-tooltip{
+  background:#2F234F !important;
+}
+
+
+.react-tabs__tab {
+  
+  padding: 0 50px;
+ 
+  color: #6D6523;
+  font-weight: 600;
+font-size: 20px;
+}
+
+@media screen and (min-width: 1024px) {
+  .estatedata .swiper-button-prev {
+    left: 90%;
+  }
+  .estatedata .swiper-button-next {
+    left: 95%;
+    margin-left: 0 !important;
+  }
+}
