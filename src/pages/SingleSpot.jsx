@@ -4,6 +4,7 @@ import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import { FaStar } from "react-icons/fa";
 import { FaMapMarkedAlt } from "react-icons/fa";
 import { FaStarHalf } from "react-icons/fa";
+import { Helmet } from "react-helmet";
 import "react-tabs/style/react-tabs.css";
 export default function SingleSpot() {
   const { id } = useParams();
@@ -32,7 +33,7 @@ export default function SingleSpot() {
         stars.push(<FaStar key={i} className="text-gray-300" />);
       }
     }
-    return <div className="flex items-center">{stars} </div>;
+    return <span className="flex items-center">{stars} </span>;
   };
 
   if (loading)
@@ -43,6 +44,9 @@ export default function SingleSpot() {
     );
   return (
     <div className=" container mx-auto">
+      <Helmet>
+        <title>{spot?.tourists_spot_name}</title>
+      </Helmet>
       <div className=" lg:mt-[30px] mt-5 mb-12 lg:mb-[70px] px-5 w-full mx-auto">
         <label className="input px-5 py-4 text-primary font-semibold input-bordered flex items-center gap-2 rounded-[10px]  ">
           <svg

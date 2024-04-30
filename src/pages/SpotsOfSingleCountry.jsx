@@ -42,7 +42,7 @@ export default function SpotsOfSingleCountry() {
         stars.push(<FaStar key={i} className="text-gray-300" />);
       }
     }
-    return <div className="flex items-center">{stars} </div>;
+    return <span className="flex items-center">{stars} </span>;
   };
   
   if (loading)
@@ -60,9 +60,16 @@ export default function SpotsOfSingleCountry() {
     }
   return (
     <div className="container mx-auto">
-    <Helmet>
+    {
+      country?.country_Name ? (
+        <Helmet>
       <title>{country?.country_Name}</title>
+    </Helmet>) : (
+      <Helmet>
+      <title>Not Found</title>
     </Helmet>
+    )
+    }
     <div className="text-center">
       <h1 className="text-left text-3xl font-poppins font-semibold mt-12 mb-4 inline-block border-b-2 border-secondary ">
         Top Destinations in {country?.country_Name}

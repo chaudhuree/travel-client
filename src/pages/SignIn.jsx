@@ -65,6 +65,7 @@ export default function SignIn() {
           <form onSubmit={onSubmit}>
             <input
               type="email"
+              autoComplete="off"
               id="email"
               value={email}
               onChange={onChange}
@@ -77,6 +78,7 @@ export default function SignIn() {
               <input
                 type={showPassword ? "text" : "password"}
                 id="password"
+                autoComplete="off"
                 value={password}
                 onChange={onChange}
                 placeholder="Password"

@@ -48,7 +48,7 @@ export default function ShowAllSpots() {
         stars.push(<FaStar key={i} className="text-gray-300" />);
       }
     }
-    return <div className="flex items-center">{stars} </div>;
+    return <span className="flex items-center">{stars} </span>;
   };
 
   const loadmore = () => {
