@@ -99,7 +99,7 @@ export default function AddSpot() {
       placeholder="Country Name"
       className="mb-6 w-full px-4 py-2 text-xl text-primary bg-white  rounded transition ease-in-out font-medium focus:outline-[#6D6523]"
     >
-      <option value="Bangladesh" disabled>Select Country</option>
+      <option value="" disabled>Select Country</option>
       {countryList.map((country, index) => (
         <option key={index} value={country}>{country}</option>
       ))}
@@ -146,7 +146,7 @@ export default function AddSpot() {
       id="travel_time"
       value={travel_time}
       onChange={onChange}
-      placeholder="Travel Time"
+      placeholder="Travel Time - i.e, 2 days"
       className="mb-6 w-full px-4 py-2 text-xl text-primary bg-white  rounded transition ease-in-out font-medium focus:outline-[#6D6523]"
     />
     {/* Total Visitors Per Year Input */}

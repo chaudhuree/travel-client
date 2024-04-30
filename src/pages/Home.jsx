@@ -10,7 +10,7 @@ function Home() {
   return (
     <>
       <Helmet>
-        <title>Home</title>
+        <title>Travel</title>
       </Helmet>
 
       <Slider />

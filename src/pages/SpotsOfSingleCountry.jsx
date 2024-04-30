@@ -47,7 +47,7 @@ export default function SpotsOfSingleCountry() {
   
   if (loading)
     return (
-      <div className="w-full text-center h-screen">
+      <div className="w-full text-center h-screen flex justify-center items-center">
         <span className="loading loading-ring loading-lg"></span>
       </div>
     );
