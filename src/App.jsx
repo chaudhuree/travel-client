@@ -18,6 +18,7 @@ import NotFound from "./pages/NotFound";
 import ShowAllSpots from "./pages/ShowAllSpots";
 import AddSpot from "./pages/AddSpot";
 import MyLists from "./pages/MyLists";
+import UpdateSpot from "./pages/UpdateSpot";
 function App() {
   return (
     <>
@@ -91,6 +92,16 @@ function App() {
           }
         >
           <Route path="/addspot" element={<AddSpot />} />
+        </Route>
+        <Route
+          path="/spot/update/:id"
+          element={
+            <LayoutWithNavbar>
+              <PrivateRoute />
+            </LayoutWithNavbar>
+          }
+        >
+          <Route path="/spot/update/:id" element={<UpdateSpot />} />
         </Route>
         <Route
           path="/spot/:id"

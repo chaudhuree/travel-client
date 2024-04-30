@@ -5,7 +5,7 @@ import { FaStar } from "react-icons/fa";
 import { FaStarHalf } from "react-icons/fa";
 import { FaEye } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import Swal from 'sweetalert2';
+import Swal from "sweetalert2";
 
 function MyLists() {
   const [loading, setLoading] = useState(true);
@@ -22,7 +22,7 @@ function MyLists() {
     };
 
     myListsFromLocalStorage();
-  }, []); 
+  }, []);
 
   useEffect(() => {
     if (auth.currentUser?.email) {
@@ -36,7 +36,7 @@ function MyLists() {
           setLoading(false);
         });
     }
-  }, [auth.currentUser?.email]); 
+  }, [auth.currentUser?.email]);
   const starGenerator = (value) => {
     let rating = parseFloat(value);
     const stars = [];
@@ -55,13 +55,13 @@ function MyLists() {
   };
   const handleDelete = (id) => {
     Swal.fire({
-      title: 'Are you sure?',
+      title: "Are you sure?",
       text: "You won't be able to revert this!",
-      icon: 'warning',
+      icon: "warning",
       showCancelButton: true,
-      confirmButtonColor: '#3085d6',
-      cancelButtonColor: '#d33',
-      confirmButtonText: 'Yes, delete it!'
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
         fetch(`https://travel-server-rg6e.onrender.com/spot/${id}`, {
@@ -70,18 +70,14 @@ function MyLists() {
           .then((response) => response.json())
           .then((data) => {
             if (data) {
-              Swal.fire(
-                'Deleted!',
-                'Your file has been deleted.',
-                'success'
-              )
+              Swal.fire("Deleted!", "Your file has been deleted.", "success");
               const updatedSpots = spots.filter((spot) => spot._id !== id);
               setSpots(updatedSpots);
               localStorage.setItem("mylists", JSON.stringify(updatedSpots));
             }
           });
       }
-    })
+    });
   };
 
   if (!auth.currentUser?.email) {
@@ -111,36 +107,46 @@ function MyLists() {
         </h1>
       </div>
       <div>
-      <div className="overflow-x-auto">
-      <table className="table table-zebra">
-        
-        <thead>
-          <tr className="font-semibold text-base">
-            <th>SL.No</th>
-            <th>Name</th>
-            <th className="max-sm:hidden">Location</th>
-            <th>Cost</th>
-            <th>Rating</th>
-            <th>Action</th>
-          </tr>
-        </thead>
-        <tbody>
-          {spots.map((spot, index) => (
-            <tr key={spot._id}>
-              <td className="font-medium">{index + 1}</td>
-              <td className="font-semibold text-primary cursor-pointer"><Link to={`/spot/${spot?._id}`}>{spot?.tourists_spot_name}</Link></td>
-              <td className="max-sm:hidden">{spot?.location}</td>
-              <td>{spot?.average_cost}</td>
-              <td>{starGenerator(spot.rating)}</td>
-              <td className="flex gap-2 flex-wrap">
-                <button className="px-2 py-1 bg-sky-500 hover:border-y-sky-700 font-semibold font-poppins text-sm rounded-md text-base-100">Update</button>
-                <button onClick={()=>handleDelete(spot?._id)} className="px-[11px] py-1 bg-red-500 hover:border-y-red-700 font-semibold font-poppins text-sm rounded-md text-base-100">Delete</button>
-              </td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-    </div>
+        <div className="overflow-x-auto">
+          <table className="table table-zebra">
+            <thead>
+              <tr className="font-semibold text-base">
+                <th>SL.No</th>
+                <th>Name</th>
+                <th className="max-sm:hidden">Location</th>
+                <th>Cost</th>
+                <th>Rating</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              {spots.map((spot, index) => (
+                <tr key={spot._id}>
+                  <td className="font-medium">{index + 1}</td>
+                  <td className="font-semibold text-primary cursor-pointer">
+                    <Link to={`/spot/${spot?._id}`}>
+                      {spot?.tourists_spot_name}
+                    </Link>
+                  </td>
+                  <td className="max-sm:hidden">{spot?.location}</td>
+                  <td>{spot?.average_cost}</td>
+                  <td>{starGenerator(spot.rating)}</td>
+                  <td className="flex gap-2 flex-wrap">
+                    <Link to={`/spot/update/${spot?._id}`} className="px-2 py-1 bg-sky-500 hover:border-y-sky-700 font-semibold font-poppins text-sm rounded-md text-base-100">
+                      Update
+                    </Link>
+                    <button
+                      onClick={() => handleDelete(spot?._id)}
+                      className="px-[11px] py-1 bg-red-500 hover:border-y-red-700 font-semibold font-poppins text-sm rounded-md text-base-100"
+                    >
+                      Delete
+                    </button>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
   );
