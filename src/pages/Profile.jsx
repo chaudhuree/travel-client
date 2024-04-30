@@ -114,13 +114,14 @@ export default function Profile() {
                   {changeDetail ? "Apply change" : "Edit"}
                 </span>
               </p>
-              <p
+              
+            </div>
+            <button
                 onClick={onLogout}
-                className="py-2 px-[13px] bg-primary text-[#FEFEFF] rounded-[8px] font-semibold text-xl cursor-pointer"
+                className="w-full bg-primary text-white px-7 py-3 text-sm font-medium uppercase rounded shadow-md hover:bg-[#403e23] transition duration-150 ease-in-out hover:shadow-lg active:bg-[#403e23]"
               >
                 Log out
-              </p>
-            </div>
+              </button>
           </form>
         </div>
       </section>

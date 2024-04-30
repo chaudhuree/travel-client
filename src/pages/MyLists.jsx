@@ -95,7 +95,13 @@ function MyLists() {
       </div>
     );
   }
-
+  if(spots?.length === 0){
+    return (
+      <div className="w-full h-screen grid items-center text-center">
+        <h1 className="text-3xl font-semibold text-primary">No Spots Found</h1>
+      </div>
+    )
+  }
   return (
     <div className="container mx-auto">
       <Helmet>
