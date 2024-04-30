@@ -134,7 +134,7 @@ function MyLists() {
               <td>{starGenerator(spot.rating)}</td>
               <td className="flex gap-2 flex-wrap">
                 <button className="px-2 py-1 bg-sky-500 hover:border-y-sky-700 font-semibold font-poppins text-sm rounded-md text-base-100">Update</button>
-                <button onClick={()=>handleDelete(spot?._id)} className="px-2 py-1 bg-red-500 hover:border-y-red-700 font-semibold font-poppins text-sm rounded-md text-base-100">Delete</button>
+                <button onClick={()=>handleDelete(spot?._id)} className="px-[11px] py-1 bg-red-500 hover:border-y-red-700 font-semibold font-poppins text-sm rounded-md text-base-100">Delete</button>
               </td>
             </tr>
           ))}
