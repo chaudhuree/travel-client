@@ -4,7 +4,6 @@ import { EffectFade, Autoplay, Navigation, Pagination } from "swiper/modules";
 import "swiper/css/bundle";
 import {bannerData} from "../assets/banner";
 export default function Slider() {
-  // console.log({bannerData})
   const [sliderData, setSliderData] = useState(bannerData);
   useEffect(() => {
     fetch("https://travel-server-rg6e.onrender.com/banner")
@@ -25,15 +24,15 @@ export default function Slider() {
         {sliderData?.map((data,index)=>{
           return <SwiperSlide key={index}>
           <div
-            className="hero min-h-[540px]"
+            className="hero min-h-[540px] "
             style={{ backgroundImage: `url(${data?.image})` }}
           >
             <div className="hero-overlay bg-opacity-60"></div>
             <div className="w-full flex flex-col gap-3 md:gap-5 lg:gap-8 text-center text-neutral-content px-[20px] md:px-[50px] lg:px-[100px] py-[30px] md:py-[60px] lg:py-[150px]">
-              <h2 className="capitalize font-poppins text-[30px] md:text-[45px] lg:text-[60px] text-center text-base-100">
+              <h2 className="capitalize font-poppins text-[30px] md:text-[45px] lg:text-[60px] text-center text-white dark:text-gray-300">
                 "{data?.heading}"
               </h2>
-              <h3 className=" font-poppins text-base md:text-xl lg:text-[24px] text-center text-base-100">
+              <h3 className="dark:text-gray-300 font-poppins text-base md:text-xl lg:text-[24px] text-center text-base-100">
                 {data?.subheading}
               </h3>
 

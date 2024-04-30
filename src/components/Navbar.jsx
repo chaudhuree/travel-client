@@ -1,5 +1,6 @@
 import { NavLink, useLocation, useNavigate, Link } from "react-router-dom";
 import { useAuth } from "../context/AuthProvider";
+import DarkModeToggler from "./DarkModeToggler";
 import { routeLists } from "../utils";
 import logo from "/logo.svg";
 import "react-tooltip/dist/react-tooltip.css";
@@ -91,6 +92,7 @@ export default function Navbar() {
       </div>
 
       <div className="navbar-end">
+        
         {currentUser ? (
           <div className="flex items-center gap-2">
             <div className="avatar dropdown dropdown-end">
@@ -116,6 +118,7 @@ export default function Navbar() {
                 </Link>
               </ul>
             </div>
+            <DarkModeToggler />
             <button
               onClick={logoutHandler}
               className="py-2 px-[13px] bg-[#FEFEFF] text-primary rounded-[8px] font-semibold text-xl max-md:hidden"
@@ -125,6 +128,7 @@ export default function Navbar() {
           </div>
         ) : (
           <div className="flex items-center gap-4">
+            <DarkModeToggler />
             <NavLink
               to="/signin"
               className={`${

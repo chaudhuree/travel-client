@@ -14,7 +14,7 @@ export default function Footer() {
   const getFullYear = () => new Date().getFullYear();
 
   return (
-    <div className="footer-section  bg-primary ">
+    <div className="footer-section  bg-primary dark:text-gray-300 ">
       <div className="container mx-auto  py-[50px] lg:px-4 text-base-100  grid grid-cols-12 items-start   mt-20 lg:gap-5 gap-8 justify-center">
         <div className="max-lg:col-span-12 w-full max-lg:items-center  lg:col-span-4 flex flex-col gap-7">
           <Link to="/" className=" text-xl ml-0 flex items-center gap-2">

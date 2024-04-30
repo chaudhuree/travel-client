@@ -103,19 +103,19 @@ function MyLists() {
     )
   }
   return (
-    <div className="container mx-auto">
+    <div className="container mx-auto dark:text-gray-300">
       <Helmet>
         <title>My Lists</title>
       </Helmet>
       <div className="text-center">
-        <h1 className="mx-auto text-3xl font-poppins font-semibold mt-12 mb-6 border-b-2 border-secondary  inline-block ">
+        <h1 className="mx-auto text-3xl font-poppins font-semibold mt-12 mb-6 border-b-2 border-secondary dark:border-sky-500  inline-block ">
           My Lists
         </h1>
       </div>
       <div>
         <div className="overflow-x-auto">
           <table className="table table-zebra">
-            <thead>
+            <thead className="dark:text-gray-400">
               <tr className="font-semibold text-base">
                 <th>SL.No</th>
                 <th>Name</th>

@@ -65,7 +65,7 @@ export default function Profile() {
         <Helmet>
           <title>Profile</title>
         </Helmet>
-        <h1 className="text-3xl text-center mt-6 font-bold text-primary">My Profile</h1>
+        <h1 className="text-3xl dark:text-gray-300 text-center mt-6 font-bold text-primary">My Profile</h1>
         <div className="w-full md:w-[50%] mt-6 px-3">
           <form>
             {/* Name Input */}
@@ -100,7 +100,7 @@ export default function Profile() {
             />
 
             <div className="flex justify-between whitespace-nowrap text-sm sm:text-lg mb-6">
-              <p className="flex items-center">
+              <p className="flex items-center dark:text-gray-300">
                 {changeDetail
                   ? "If everything ok then ➜ "
                   : "Do you want to update your profile?"}
@@ -109,7 +109,7 @@ export default function Profile() {
                     changeDetail && onSubmit();
                     setChangeDetail((prevState) => !prevState);
                   }}
-                  className="text-secondary hover:text-[#1b0a0a] transition ease-in-out duration-200 ml-2 cursor-pointer border-b-2 border-[#4f1410c8] font-semibold"
+                  className="text-secondary dark:text-sky-600 dark:hover:text-sky-800 hover:text-[#1b0a0a] transition ease-in-out duration-200 ml-2 cursor-pointer border-b-2 border-[#4f1410c8] font-semibold"
                 >
                   {changeDetail ? "Apply change" : "Edit"}
                 </span>

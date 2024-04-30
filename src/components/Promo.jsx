@@ -2,7 +2,7 @@ import travel_together from "/travel_together.svg";
 export default function Promo() {
   return (
     <div className="py-10">
-      <div className=" bg-[#e2e2d3] px-14 md:px-20 lg:px-24 py-10 md:py-15 lg:py-20 flex flex-wrap justify-between items-center">
+      <div className=" bg-[#e2e2d3] dark:bg-gray-800 dark:text-gray-300 px-14 md:px-20 lg:px-24 py-10 md:py-15 lg:py-20 flex flex-wrap justify-between items-center">
         <div className="w-full md:w-1/2 max-md:order-2 max-md:flex max-md:flex-col max-md:justify-center max-md:items-center">
           <h1 className="text-[30px] md:text-[40px] lg:text-[60px] font-semibold md:font-bold font-poppins">
             Get the Best Promo

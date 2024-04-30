@@ -3,7 +3,7 @@ import edit from "/edit.svg";
 import tracking from "/tracking.svg";
 function ProcedureToJoin() {
   return (
-    <div className="my-[108px] container mx-auto font-poppins px-5">
+    <div className="my-[108px] container mx-auto font-poppins px-5  dark:text-gray-300">
       <p className="leading-[120%] text-base font-normal text-center">
         Three steps. Three minutes.
       </p>

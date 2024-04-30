@@ -66,14 +66,14 @@ export default function ShowAllSpots() {
   if (loading) {
     return (
       <div className="w-full h-dvh text-center flex justify-center items-center">
-        <span className=" loading loading-ring loading-lg"></span>
+        <span className=" loading loading-ring loading-lg dark:text-gray-300"></span>
       </div>
     );
   }
 
   if (spots.length === 0) {
     return (
-      <div className="w-full h-dvh text-center flex justify-center items-center">
+      <div className="w-full h-dvh text-center flex justify-center items-center dark:text-gray-300">
         <h1>No spots found</h1>
       </div>
     );
@@ -83,30 +83,30 @@ export default function ShowAllSpots() {
     setSort(e.target.value);
   };
   return (
-    <div className="container mx-auto">
+    <div className="container mx-auto dark:text-gray-300">
       <Helmet>
         <title>Top Destinations</title>
       </Helmet>
 
       <div className="text-center">
-        <h1 className="mx-auto text-3xl font-poppins font-semibold mt-12 mb-2 border-b-2 border-secondary  inline-block ">
+        <h1 className="mx-auto text-3xl font-poppins font-semibold mt-12 mb-2 border-b-2 border-secondary dark:border-sky-600  inline-block ">
           Top Destinations Around The World
         </h1>
       </div>
       <div className="text-center mt-10">
-        <select onChange={handleSort} className="select select-bordered w-full max-w-xs outline-none focus:outline-primary">
-          <option  selected disabled className="text-primary font-semibold">
+        <select onChange={handleSort} className="select select-bordered w-full max-w-xs outline-none focus:outline-primary dark:bg-gray-600 dark:text-gray-300">
+          <option  selected disabled className="text-primary dark:text-black font-semibold  dark:bg-white ">
             Sort
           </option>
-          <option value="latest" className="text-primary font-semibold">Latest</option>
-          <option value="oldest" className="text-primary font-semibold">Oldest</option>
+          <option value="latest" className="text-primary dark:text-black font-semibold dark:bg-white">Latest</option>
+          <option value="oldest" className="text-primary dark:text-black font-semibold dark:bg-white">Oldest</option>
         </select>
       </div>
       <div className="grid grid-cols-12">
         {spots.map((spot) => (
           <div
             key={spot?._id}
-            className="card card-compact  bg-base-100 shadow-xl cursor-default col-span-12 sm:col-span-6 md:col-span-4 lg:col-span-4  mt-6 mx-2"
+            className="card dark:bg-gray-800 dark:text-gray-300 card-compact  bg-base-100 shadow-xl cursor-default col-span-12 sm:col-span-6 md:col-span-4 lg:col-span-4  mt-6 mx-2"
           >
             <figure className="p-3 rounded-xl">
               <div
@@ -159,8 +159,8 @@ export default function ShowAllSpots() {
         <button
           disabled={spots.length === totalItems}
           onClick={loadmore}
-          className={`bg-primary text-gray-200 px-6 py-4 rounded-lg text-2xl ${
-            spots.length === totalItems && "bg-gray-400"
+          className={`bg-primary text-gray-200  px-6 py-4 rounded-lg text-2xl ${
+            spots.length === totalItems && "bg-gray-400 dark:bg-gray-300 dark:text-black"
           }`}
         >
           Load More

@@ -59,7 +59,7 @@ export default function SignIn() {
       <Helmet>
         <title>Sign In</title>
       </Helmet>
-      <h1 className="text-3xl text-center mt-6 font-bold text-primary">Sign In</h1>
+      <h1 className="dark:text-gray-300 text-3xl text-center mt-6 font-bold text-primary">Sign In</h1>
       <div className="flex justify-center flex-wrap items-center px-6 py-12 max-w-6xl mx-auto">
         <div className="w-full md:w-[67%] lg:w-[50%] lg:ml-20">
           <form onSubmit={onSubmit}>
@@ -97,7 +97,7 @@ export default function SignIn() {
               )}
             </div>
             <div className="flex justify-between whitespace-nowrap text-sm sm:text-lg">
-              <p className="mb-6">
+              <p className="mb-6 dark:text-gray-300">
                 Don't have a account?
                 <Link
                   to="/register"

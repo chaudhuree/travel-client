@@ -29,7 +29,7 @@ export default function ForgotPassword() {
       <Helmet>
         <title>Forgot Password</title>
       </Helmet>
-      <h1 className="text-3xl text-center mt-6 font-bold text-primary">Forgot Password</h1>
+      <h1 className="dark:text-gray-300 text-3xl text-center mt-6 font-bold text-primary">Forgot Password</h1>
       <div className="flex justify-center flex-wrap items-center px-6 py-12 max-w-6xl mx-auto">
        
         <div className="w-full md:w-[67%] lg:w-[50%] lg:ml-20 font-poppins">
@@ -44,7 +44,7 @@ export default function ForgotPassword() {
             />
 
             <div className="flex justify-between whitespace-nowrap text-sm sm:text-lg">
-              <p className="mb-6">
+              <p className="mb-6 dark:text-gray-300">
                 Don't have a account?
                 <Link
                   to="/register"
@@ -56,14 +56,14 @@ export default function ForgotPassword() {
               <p>
                 <Link
                   to="/signin"
-                  className="text-sky-600 hover:text-sky-900 transition duration-200 ease-in-out"
+                  className="text-sky-600 dark:text-gray-300 hover:text-sky-900 transition duration-200 ease-in-out"
                 >
                   Sign in instead
                 </Link>
               </p>
             </div>
             <button
-              className="w-full bg-primary text-white px-7 py-3 text-sm font-medium uppercase rounded shadow-md hover:bg-[#403e23] transition duration-150 ease-in-out hover:shadow-lg active:bg-[#403e23]"
+              className="w-full bg-primary  text-white px-7 py-3 text-sm font-medium uppercase rounded shadow-md hover:bg-[#403e23] transition duration-150 ease-in-out hover:shadow-lg active:bg-[#403e23]"
               type="submit"
             >
               Send reset password

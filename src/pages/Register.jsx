@@ -63,7 +63,7 @@ export default function Register() {
       <Helmet>
         <title>Sign Up</title>
       </Helmet>
-      <h1 className="text-3xl text-center mt-6 font-bold text-primary">Sign Up</h1>
+      <h1 className="dark:text-gray-300 text-3xl text-center mt-6 font-bold text-primary">Sign Up</h1>
       <div className="flex justify-center flex-wrap items-center px-6 py-12 max-w-6xl mx-auto">
         <div className="w-full md:w-[67%] lg:w-[50%] lg:ml-20">
           <form onSubmit={handleSubmit(onSubmit)}>
@@ -146,7 +146,7 @@ export default function Register() {
               {<p className="text-red-500">{errors.photoURL?.message}</p>}
             </div>
             <div className="flex justify-between whitespace-nowrap text-sm sm:text-lg mt-2">
-              <p className="mb-6">
+              <p className="mb-6 dark:text-gray-300">
                 Have a account?
                 <Link
                   to="/signin"

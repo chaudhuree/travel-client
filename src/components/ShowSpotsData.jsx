@@ -52,10 +52,10 @@ function ShowSpotsData() {
   return (
     <div>
       <div className="ml-3">
-      <h1 className="text-left text-3xl font-poppins font-semibold mt-12 mb-2 ">
+      <h1 className="text-left text-3xl font-poppins font-semibold mt-12 mb-2 dark:text-gray-300 ">
         Top Destinations
       </h1>
-      <h2 className="text-left text-xl font-poppins mb-4">
+      <h2 className="text-left text-xl font-poppins mb-4 dark:text-gray-300">
         Choose your best destination
       </h2>
       </div>
@@ -63,7 +63,7 @@ function ShowSpotsData() {
         {spots?.map((spot) => (
           <div
             key={spot?._id}
-            className="card card-compact  bg-base-100 shadow-xl cursor-default col-span-12 sm:col-span-6 md:col-span-4 lg:col-span-4  mt-6 mx-2"
+            className="card card-compact dark:bg-gray-800  bg-base-100 shadow-xl cursor-default col-span-12 sm:col-span-6 md:col-span-4 lg:col-span-4  mt-6 mx-2"
           >
             <figure className="p-3 rounded-xl">
               <div
@@ -75,12 +75,12 @@ function ShowSpotsData() {
                 }}
                 className="rounded-xl shadow-xl w-full h-48 relative"
               >
-                <p className="absolute right-2 top-2 py-1 px-6 bg-[#7F57F1] text-[#C5DEE5] rounded-[8px] opacity-80 hover:opacity-100 text-sm">
+                <p className="dark:text-gray-300 absolute right-2 top-2 py-1 px-6 bg-[#7F57F1] text-[#C5DEE5] rounded-[8px] opacity-80 hover:opacity-100 text-sm">
                   {spot?.country_Name}
                 </p>
               </div>
             </figure>
-            <div className="p-6 mt-6">
+            <div className="p-6 mt-6 dark:text-gray-300">
               <h2 className="font-poppins font-semibold text-[21px] leading-[120%] truncate">
                 {spot?.tourists_spot_name}
               </h2>
@@ -94,7 +94,7 @@ function ShowSpotsData() {
               </p>
               <p className="flex justify-between items-centertext-xl font-poppins font-semibold text-primary mt-4">
                <span> {spot?.average_cost}$/person</span>
-               <span className="text-black font-normal">{spot?.seasonality}</span>
+               <span className="text-black dark:text-gray-300 font-normal">{spot?.seasonality}</span>
               </p>
               <Link className=" text-base flex  items-center justify-center hover:bg-[#1F2937] bg-primary px-5 py-3 rounded-lg text-gray-200 font-semibold text-center my-4 cursor-pointer" to={`/spot/${spot?._id}`}>View Details</Link>
             </div>

@@ -43,7 +43,7 @@ export default function SingleSpot() {
       </div>
     );
   return (
-    <div className=" container mx-auto">
+    <div className=" container mx-auto  dark:text-gray-300">
       <Helmet>
         <title>{spot?.tourists_spot_name}</title>
       </Helmet>

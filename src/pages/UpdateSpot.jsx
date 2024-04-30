@@ -104,7 +104,7 @@ export default function UpdateSpot() {
         <Helmet>
           <title>Update Spot</title>
         </Helmet>
-        <h1 className="text-3xl text-center mt-6 font-bold text-primary">
+        <h1 className="text-3xl text-center mt-6 font-bold text-primary dark:text-gray-300">
           Update Spot
         </h1>
         <div className="w-full md:w-[50%] mt-6 px-3">

@@ -69,7 +69,7 @@ export default function AddSpot() {
     <Helmet>
       <title>Add Spot</title>
     </Helmet>
-    <h1 className="text-3xl text-center mt-6 font-bold text-primary">Add Spot</h1>
+    <h1 className="text-3xl text-center mt-6 font-bold text-primary dark:text-gray-300">Add Spot</h1>
     <div className="w-full md:w-[50%] mt-6 px-3">
       <form onSubmit={onSubmit}>
       {/* Image Input */}

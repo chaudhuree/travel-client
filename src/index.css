@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Tailwind-based global styles */
+body {
+  @apply bg-white ; /* Default light mode styles */
+}
+
+.dark body {
+  @apply bg-gray-900; /* Dark mode styles */
+}
+d
 ul li a.active {
   background-color: #2b3440;
   color: #f9fafb;

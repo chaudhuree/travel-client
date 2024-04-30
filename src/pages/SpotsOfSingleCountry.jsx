@@ -54,12 +54,12 @@ export default function SpotsOfSingleCountry() {
     if(spots.length === 0){
       return (
         <div className="w-full h-screen grid items-center text-center">
-          <h1 className="text-3xl font-semibold text-primary">No Spots Found</h1>
+          <h1 className="text-3xl font-semibold text-primary dark:text-gray-300">No Spots Found</h1>
         </div>
       )
     }
   return (
-    <div className="container mx-auto">
+    <div className="container mx-auto dark:text-gray-300">
     {
       country?.country_Name ? (
         <Helmet>
@@ -71,7 +71,7 @@ export default function SpotsOfSingleCountry() {
     )
     }
     <div className="text-center">
-      <h1 className="text-left text-3xl font-poppins font-semibold mt-12 mb-4 inline-block border-b-2 border-secondary ">
+      <h1 className="text-left text-3xl font-poppins font-semibold mt-12 mb-4 inline-block border-b-2 border-secondary dark:border-sky-600 ">
         Top Destinations in {country?.country_Name}
       </h1>
       <p className="text-left text-base font-poppins mb-6 w-3/4 mx-auto">
@@ -83,7 +83,7 @@ export default function SpotsOfSingleCountry() {
         {spots.map((spot) => (
           <div
             key={spot?._id}
-            className="card card-compact  bg-base-100 shadow-xl cursor-default col-span-12 sm:col-span-6 md:col-span-4 lg:col-span-4  mt-6 mx-2"
+            className="card dark:bg-gray-800 card-compact  bg-base-100 shadow-xl cursor-default col-span-12 sm:col-span-6 md:col-span-4 lg:col-span-4  mt-6 mx-2"
           >
             <figure className="p-3 rounded-xl">
               <div
@@ -115,7 +115,7 @@ export default function SpotsOfSingleCountry() {
               </p>
               <p className="flex justify-between items-centertext-xl font-poppins font-semibold text-primary mt-4">
                 <span> {spot?.average_cost}$/person</span>
-                <span className="text-black font-normal">
+                <span className="text-black dark:text-gray-300 font-normal">
                   {spot?.seasonality}
                 </span>
               </p>

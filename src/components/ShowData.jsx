@@ -35,7 +35,7 @@ export default function ShowData() {
     );
   return (
     <div>
-      <h1 className="text-left text-3xl font-poppins font-semibold mt-12 mb-4 ml-3">
+      <h1 className="dark:text-gray-300 text-left text-3xl font-poppins font-semibold mt-12 mb-4 ml-3">
         Ways to Take a Tour to
       </h1>
       <div className="estatedata relative overflow-hidden py-12 ">
@@ -58,10 +58,10 @@ export default function ShowData() {
           }}
         >
           {countryData?.map((country, index) => (
-            <SwiperSlide key={index}>
+            <SwiperSlide key={index} className="h-full">
               <Link
                 to={`/country/${country?.country_Name}/${country?._id}`}
-                className="card card-compact  bg-base-100 shadow-xl cursor-pointer"
+                className="card dark:bg-gray-800 dark:text-gray-300 dark:mt-6  card-compact  bg-base-100 shadow-xl cursor-pointer"
               >
                 <figure className="p-3 rounded-xl">
                   <div
