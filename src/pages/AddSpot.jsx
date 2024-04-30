@@ -4,22 +4,7 @@ import { getAuth } from "firebase/auth";
 import Spinner from '../components/Spinner';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
-/* 
-{
-    "image": "https://i.ibb.co/vBMwMmn/ayutthaya.jpg",
-    "tourists_spot_name": "Ayutthaya",
-    "country_Name": "Thailand",
-    "location": "Central Thailand",
-    "short_description": "Ayutthaya is an ancient city and a UNESCO World Heritage Site, renowned for its historical ruins and temples. It was once the capital of the Ayutthaya Kingdom and holds great historical significance. Visitors can explore the ruins of temples like Wat Mahathat and Wat Chaiwatthanaram, which showcase the grandeur of ancient Thai architecture. The city offers a glimpse into Thailand's rich history and is a must-visit for history buffs and those interested in Thai culture.",
-    "average_cost": 170,
-    "seasonality": "Summer",
-    "travel_time": "2 days",
-    "totalVisitorsPerYear": 200000,
-    "user_email": "chaudhuree00@gmail.com",
-    "user_name": "sohan chaudhuree"
-    "rating" : 4.5,   
-}
-*/
+
 export default function AddSpot() {
   const auth = getAuth();
   const [loading, setLoading] = useState(false);
