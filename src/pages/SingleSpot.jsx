@@ -81,7 +81,7 @@ export default function SingleSpot() {
             <Tab>Description</Tab>
             <Tab>About</Tab>
           </TabList>
-          <TabPanel>
+          <TabPanel className="pl-4">
             <h1 className="text-4xl font-semibold font-poppins">
               {spot?.tourists_spot_name}
             </h1>
@@ -107,7 +107,7 @@ export default function SingleSpot() {
               visitors per year on average
             </p>
           </TabPanel>
-          <TabPanel>
+          <TabPanel className="pl-4">
             <p className="font-poppins  text-lg mb-3">
               <span className="font-semibold mr-2">Country:</span> {spot?.country_Name}
             </p>
