@@ -61,7 +61,7 @@ export default function ShowData() {
             <SwiperSlide key={index} className="h-full">
               <Link
                 to={`/country/${country?.country_Name}/${country?._id}`}
-                className="card dark:bg-gray-800 dark:text-gray-300 dark:mt-6  card-compact  bg-base-100 shadow-xl cursor-pointer"
+                className="card dark:bg-gray-800 dark:text-gray-300 dark:mt-6  card-compact  bg-base-100 shadow-xl cursor-pointer md:min-h-[426px]"
               >
                 <figure className="p-3 rounded-xl">
                   <div

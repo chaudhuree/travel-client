@@ -135,7 +135,7 @@ export default function Navbar() {
                 pathMatchRoute("/signin")
                   ? " border-[1px] border-[#4f1410c8]"
                   : ""
-              } py-2 px-[13px] bg-[#FEFEFF] text-primary rounded-[8px] font-semibold text-xl`}
+              } py-1 md:py-2 px-2 md:px-[13px] bg-[#FEFEFF] text-primary rounded-[8px] font-semibold text-sm md:text-xl`}
             >
               Login ➝
             </NavLink>

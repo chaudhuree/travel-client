@@ -160,7 +160,7 @@ export default function ShowAllSpots() {
           disabled={spots.length === totalItems}
           onClick={loadmore}
           className={`bg-primary text-gray-200  px-6 py-4 rounded-lg text-2xl ${
-            spots.length === totalItems && "bg-gray-400 dark:bg-gray-300 dark:text-black"
+            spots.length === totalItems && "hidden"
           }`}
         >
           Load More
