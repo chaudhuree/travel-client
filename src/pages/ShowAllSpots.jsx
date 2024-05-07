@@ -100,6 +100,8 @@ export default function ShowAllSpots() {
           </option>
           <option value="latest" className="text-primary dark:text-black font-semibold dark:bg-white">Latest</option>
           <option value="oldest" className="text-primary dark:text-black font-semibold dark:bg-white">Oldest</option>
+          <option value="highestPrice" className="text-primary dark:text-black font-semibold dark:bg-white">MaxPrice</option>
+          <option value="lowestPrice" className="text-primary dark:text-black font-semibold dark:bg-white">MinPrice</option>
         </select>
       </div>
       <div className="grid grid-cols-12">
