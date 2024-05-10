@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useParams,useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import { FaStar } from "react-icons/fa";
@@ -11,6 +11,8 @@ export default function SingleSpot() {
   const [spot, setSpot] = useState(null);
   const [loading, setLoading] = useState(true);
   const [tabIndex, setTabIndex] = useState(0);
+  const [search, setSearch] = useState("");
+  const navigate = useNavigate();
   useEffect(() => {
     fetch(`https://travel-server-rg6e.onrender.com/spot/${id}`)
       .then((res) => res.json())
@@ -35,6 +37,10 @@ export default function SingleSpot() {
     }
     return <span className="flex items-center">{stars} </span>;
   };
+  const handleSearch = (e) => {
+    e.preventDefault();
+    navigate(`/search?query=${search}`);
+  };
 
   if (loading)
     return (
@@ -47,7 +53,7 @@ export default function SingleSpot() {
       <Helmet>
         <title>{spot?.tourists_spot_name}</title>
       </Helmet>
-      <div className=" lg:mt-[30px] mt-5 mb-12 lg:mb-[70px] px-5 w-full mx-auto">
+      <form onSubmit={handleSearch} className=" lg:mt-[30px] mt-5 mb-12 lg:mb-[70px] px-5 w-full mx-auto">
         <label className="input px-5 py-4 text-primary font-semibold input-bordered flex items-center gap-2 rounded-[10px]  ">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -63,11 +69,14 @@ export default function SingleSpot() {
           </svg>
           <input
             type="text"
+            name="search"
             className="grow "
             placeholder="Go to mountain, ocean, attractions"
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
           />
         </label>
-      </div>
+      </form>
       <div className="mb-5 md:mb-7">
         <img
           src={spot?.image}

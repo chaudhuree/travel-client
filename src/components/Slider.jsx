@@ -1,10 +1,13 @@
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectFade, Autoplay, Navigation, Pagination } from "swiper/modules";
 import "swiper/css/bundle";
 import {bannerData} from "../assets/banner";
 export default function Slider() {
   const [sliderData, setSliderData] = useState(bannerData);
+  const [search, setSearch] = useState("");
+  const navigate = useNavigate();
   useEffect(() => {
     fetch("https://travel-server-rg6e.onrender.com/banner")
       .then((response) => response.json())
@@ -12,6 +15,10 @@ export default function Slider() {
         setSliderData(data);
       });
   }, []);
+  const handleSearch = (e) => {
+    e.preventDefault();
+    navigate(`/search?query=${search}`);
+  };
   return (
     <>
       <Swiper
@@ -36,7 +43,7 @@ export default function Slider() {
                 {data?.subheading}
               </h3>
 
-              <div className=" mt-[60px] lg:mt-[90px] w-[60%] mx-auto max-md:hidden">
+              <form onSubmit={handleSearch} className=" mt-[60px] lg:mt-[90px] w-[60%] mx-auto max-md:hidden">
                 <label className="input px-5 py-4 text-primary font-semibold input-bordered flex items-center gap-2 rounded-2xl focus:ring-2 focus:ring-primary">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -50,9 +57,9 @@ export default function Slider() {
                       fill="#6D6523"
                     />
                   </svg>
-                  <input type="text" className="grow" placeholder="Destination" />
+                  <input value={search}  type="text" className="grow" placeholder="Destination" onChange={(e) => setSearch(e.target.value)} />
                 </label>
-              </div>
+              </form>
             </div>
           </div>
         </SwiperSlide>
