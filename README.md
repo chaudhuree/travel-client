@@ -3,7 +3,6 @@
 
 ## This is a Travel Agency Management Website.
 
-## Selected Categorie:  Southeast Asia
 ## Description:
 
 - This is a travel management website from where you can select your desired destination for travel.
