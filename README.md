@@ -11,6 +11,9 @@
 - This website has a beautiful user interface with secured authentication system.
 - Have a great ui for adding travel destination and manage own data from a nice user data management page.
 
+### Technologies that have been used to build this project: 
+React js | Express js | Mongodb | Tailwind CSS
+
 ---
 
 ### To run the project locally run this command
